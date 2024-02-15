@@ -45,7 +45,8 @@ public class c02_Variables_Types {
         
         //double: Approx. ±5.0 x 10^324 to ±1.7 x 10^308 with 15 o 16 decimal digits
         double aDouble = 400.123456879; //by default a decimal number is a float
-        
+
+
         //BOOLEANS, they can only be true or false
 
         boolean aBool=false;
@@ -55,7 +56,7 @@ public class c02_Variables_Types {
         int anIntVar; //0 by default
         float aFloatVar; //0.0f by default
 
-        int a, b, c; //We have declared three integer variables (a, b, c​​) 
+        int a, b, c; //We have declared three integer variables (a, b, c)
 
         int d = 3; //d is initialized with 3
         int e, f = 4, g = -56; //declared 3 variables with different values (0, 4 y -56)
