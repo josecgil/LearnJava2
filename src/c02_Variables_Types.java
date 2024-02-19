@@ -1,6 +1,7 @@
 
 public class c02_Variables_Types {
 
+
 	public static void main(String[] args) {
         //Comments
 
@@ -64,7 +65,7 @@ public class c02_Variables_Types {
 
         //strings and chars
         char aChar='c';
-        String anString = "an string char";
+        String anString = "an string";
 
         //ESPECIAL CHARS
 
@@ -78,8 +79,14 @@ public class c02_Variables_Types {
         //Is the same in a char
         char anEscChar = '\'';
 
-        //How can we put a "\" character in a string?
-        String stringWithBackslash = "This is a string with a backslash: \\";
+        //How can we put a "\" character in a string
+        String filePathUnix="/Documents/alex/file.txt";
+        String filePathWindows="C:\\Documents\\alex\\file.txt";
+        System.out.println(filePathWindows);
+
+
+        String stringWithBackslash = "This is a string with a backslash: \\\\\\\\";
+        System.out.println(stringWithBackslash);
 
         // It is also used for special characters that can not be displayed using the keyboard :
         // New line (enter) : \ n
@@ -88,6 +95,7 @@ public class c02_Variables_Types {
 
         //Example copyright symbol is the Unicode character 169 (A9 in hexadecimal)  
         System.out.print("\u00A9 1999-2010 \t Mi empresa \n");
+
         System.out.println("This is a new line");
 
         //Concatenate Strings
