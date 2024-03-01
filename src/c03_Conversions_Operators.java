@@ -5,15 +5,15 @@ public class c03_Conversions_Operators {
         //CONVERSIONS
 
         //implicit conversions
-        int anInt = 3;
-        long aLong = anInt;
+        int anInt = 3; //8 bits 00000011
+        long aLong = anInt; //16 bits 0000000000000011
 
         float aFloat = 1.15f;
         double aDouble = aFloat; //1.15f the float becomes double 1.15d
 
         anInt = 3;
         aFloat = anInt; //the integer 3 becomes the float 3.0f
-        
+
         //explicit conversion (casting )
         short aShort = (short)anInt;
         byte aByte = (byte)anInt;

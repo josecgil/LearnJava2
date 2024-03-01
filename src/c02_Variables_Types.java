@@ -118,9 +118,13 @@ public class c02_Variables_Types {
 
         //A constant stores a value that is fixed throughout the program
         final double PI=3.1416;
-
         
         double result =aVariable*PI+100;
+
+        final int MINUTES_IN_AN_HOUR=60;
+        final int SECONDS_IN_AN_MINUTE=60;
+
+        int seconds=1*MINUTES_IN_AN_HOUR*SECONDS_IN_AN_MINUTE;
 
 	}
 

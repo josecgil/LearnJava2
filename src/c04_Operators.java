@@ -51,8 +51,7 @@ public class c04_Operators {
         result = (1 == 1) || (3 > 4); //OR
         result = !(2 > 1); //NOT
 
-
-        //Operator Precedence
+        //Operator precedence
 
         // ++ y --
         // !

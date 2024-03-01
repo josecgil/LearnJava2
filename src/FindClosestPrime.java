@@ -2,8 +2,18 @@ import java.util.Scanner;
 
 public class FindClosestPrime {
 
+    static class Triangle {
+        public int numberOfSides=3;
+    }
+
     public static void main(String[] args) throws Exception {
         //Dado un número entero buscar el número primo más cercano (por arriba o por abajo)
+
+        Triangle miTriangulo=new Triangle();
+        System.out.println(miTriangulo.numberOfSides);
+        boolean isTriangle=isTriangle(miTriangulo);
+        System.out.println(miTriangulo.numberOfSides);
+
 
         Scanner scanner=new Scanner(System.in);
 
@@ -16,6 +26,10 @@ public class FindClosestPrime {
 
     }
 
+    private static boolean isTriangle(Triangle triangle) {
+        triangle.numberOfSides=4;
+        return false;
+    }
 
     // 10 => 7
     /*

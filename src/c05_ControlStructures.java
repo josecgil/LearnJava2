@@ -85,6 +85,7 @@ public class c05_ControlStructures {
         String password = "patata555";
         boolean passwordIsLong=password.length()>8?true:false;
 
+
         hasError = true;
         String message = hasError ? "There is an error" : "No errors";
         System.out.println(message);
