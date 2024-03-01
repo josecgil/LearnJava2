@@ -4,7 +4,7 @@ public class c05_ControlStructures {
 
         System.out.println("Press one key, from 0 to 9");
         int unicodeKey = System.in.read();
-        char key=(char)unicodeKey;
+        char key = (char) unicodeKey;
 
         //Without curly braces, only valid for one line sentences.
         //Not recommended
@@ -13,7 +13,7 @@ public class c05_ControlStructures {
 
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
+        key = (char) unicodeKey;
         if (key > '5')
             System.out.println("Key is greater than 5");
         else
@@ -24,41 +24,33 @@ public class c05_ControlStructures {
         //recommended
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
-        if (key == '5')
-        {
+        key = (char) unicodeKey;
+        if (key == '5') {
             System.out.println("5!, good key!");
         }
 
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
+        key = (char) unicodeKey;
         if (key > '5') {
             System.out.println("Key is greater than 5");
-        }
-        else {
+        } else {
             System.out.println("Key is less than or equal to 5");
         }
 
         //multiples else with "else if"
-        boolean hasError=false;
+        boolean hasError = false;
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
-        if (key <= '5')
-        {
+        key = (char) unicodeKey;
+        if (key <= '5') {
             System.out.println("Key is less than or equal to 5");
-        }
-        else if ( (key=='6') && (!hasError) ) //you can check any condition in the if
+        } else if ((key == '6') && (!hasError)) //you can check any condition in the if
         {
             System.out.println("key is 6");
-        }
-        else if (key=='7')
-        {
+        } else if (key == '7') {
             System.out.println("key is 7");
-        }
-        else
-        {
+        } else {
             System.out.println("key is greater than 7");
         }
 
@@ -66,14 +58,11 @@ public class c05_ControlStructures {
         //in any if/else code block
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
-        if (key > '5')
-        {
+        key = (char) unicodeKey;
+        if (key > '5') {
             System.out.println("key is greater than 5");
             System.out.println("Lucky one!");
-        }
-        else
-        {
+        } else {
             System.out.println("key is less than or equal to 5");
             System.out.println("Keep trying!");
         }
@@ -83,7 +72,7 @@ public class c05_ControlStructures {
 
         //Similar to an if but you can only evaluate an expression and return one value
         String password = "patata555";
-        boolean passwordIsLong=password.length()>8?true:false;
+        boolean passwordIsLong = password.length() > 8;
 
 
         hasError = true;
@@ -98,9 +87,8 @@ public class c05_ControlStructures {
 
         System.out.println("Press another key, from 0 to 9");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
-        switch (key)
-        {
+        key = (char) unicodeKey;
+        switch (key) {
             case '1':
                 System.out.println("First number");
                 break;
@@ -122,26 +110,23 @@ public class c05_ControlStructures {
 
         System.out.println("Press any key to know his Unicode value or 0 to end");
         unicodeKey = System.in.read();
-        key=(char)unicodeKey;
-        while (key != '0')
-        {
+        key = (char) unicodeKey;
+        while (key != '0') {
             System.out.println("El valor unicode de '" + key + "' es " + unicodeKey);
             unicodeKey = System.in.read();
-            key=(char)unicodeKey;
+            key = (char) unicodeKey;
         }
 
 
         //DO WHILE
 
         System.out.println("Press any key to know his Unicode value or 0 to end");
-        do
-        {
+        do {
             unicodeKey = System.in.read();
-            key=(char)unicodeKey;
+            key = (char) unicodeKey;
             System.out.println("Unicode value is '" + key + "' es " + unicodeKey);
 
         } while (key != '0');
-
 
 
         //FOR
@@ -150,15 +135,13 @@ public class c05_ControlStructures {
         //An space to init a variable
         //An space to check a condition
         //An space to evaluate an expression
-        for (int i = 1; i <= 5; i++)
-        {
+        for (int i = 1; i <= 5; i++) {
             System.out.println("Line number" + i);
         }
 
         //every one of its parts are optional
         int x = 10;
-        for (; x > 0; x--)
-        {
+        for (; x > 0; x--) {
             System.out.println("Number" + x);
         }
 
@@ -175,10 +158,8 @@ public class c05_ControlStructures {
         //Control is transferred to the statement following the terminated statement, if any.
 
 
-        for (int i = 1; i <= 100; i++)
-        {
-            if (i == 5)
-            {
+        for (int i = 1; i <= 100; i++) {
+            if (i == 5) {
                 break;
             }
             System.out.println(i);
@@ -188,20 +169,19 @@ public class c05_ControlStructures {
         //the continue statement transfers control to the next iteration of the wrapper instruction in which appears        string frase = "Esta es una frase con varias palabras";
 
         //Count the lowercase vowels of a sentence
-        int lowerCaseVowels=0;
+        int lowerCaseVowels = 0;
         String sentence = "This is a sentence with many words";
-        for (int i=0;i<sentence.length();i++) {
-            char character=sentence.charAt(i);
-            if (Character.isUpperCase(character))
-            {
+        for (int i = 0; i < sentence.length(); i++) {
+            char character = sentence.charAt(i);
+            if (Character.isUpperCase(character)) {
                 continue;
             }
-            if  ( (character=='a') || (character=='e') || (character=='i') || (character=='o') || (character=='u') )  {
+            if ((character == 'a') || (character == 'e') || (character == 'i') || (character == 'o') || (character == 'u')) {
                 lowerCaseVowels++;
             }
         }
-        System.out.println("The sentence '"+sentence+"' ");
-        System.out.println("has "+lowerCaseVowels+" lowercase vowels");
+        System.out.println("The sentence '" + sentence + "' ");
+        System.out.println("has " + lowerCaseVowels + " lowercase vowels");
     }
 
 }

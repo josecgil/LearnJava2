@@ -8,13 +8,13 @@ public class c04_Operators {
         //Math operators
 
         int sum = 4 + 2;
-        int subtraction= 4 - 2;
+        int subtraction = 4 - 2;
         int multiplication = 4 * 2;
         int division = 4 / 2;
 
         int remainder = 5 % 2; //Also "modulus". Result of integer division of 5/2, the remainder is 1.
 
-        double divisionResultWithDecimals= 5 / 2; //result is 2.5d;
+        double divisionResultWithDecimals = 5 / 2; //result is 2.5d;
 
         int aNumber = 1;
 
@@ -22,13 +22,12 @@ public class c04_Operators {
 
         aNumber--; //same as aNumber=aNumber-1;
 
-        int quantity=2;
+        int quantity = 2;
 
         aNumber += quantity; //same as aNumber=aNumber+quantity;
         aNumber -= quantity; //same as aNumber=aNumber-quantity;
         aNumber *= quantity; //same as aNumber=aNumber*quantity;
         aNumber /= quantity; //same as aNumber=aNumber/quantity;
-
 
 
         //Relational operators
@@ -47,9 +46,9 @@ public class c04_Operators {
 
         //Logical operators
 
-        result = (1 == 1) && (2 > 1); //AND
-        result = (1 == 1) || (3 > 4); //OR
-        result = !(2 > 1); //NOT
+        result = true; //AND
+        result = true; //OR
+        result = false; //NOT
 
         //Operator precedence
 

@@ -1,7 +1,6 @@
-
 public class c03_Conversions_Operators {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         //CONVERSIONS
 
         //implicit conversions
@@ -15,8 +14,8 @@ public class c03_Conversions_Operators {
         aFloat = anInt; //the integer 3 becomes the float 3.0f
 
         //explicit conversion (casting )
-        short aShort = (short)anInt;
-        byte aByte = (byte)anInt;
+        short aShort = (short) anInt;
+        byte aByte = (byte) anInt;
 
 
         //conversion with information loss
@@ -26,14 +25,14 @@ public class c03_Conversions_Operators {
 
         //Conversion with parsing
         String aNumberWithoutDecimalsInAString = "45";
-        int intParsedFromStr=Integer.parseInt(aNumberWithoutDecimalsInAString);
+        int intParsedFromStr = Integer.parseInt(aNumberWithoutDecimalsInAString);
         long longParsedFromStr = Long.parseLong(aNumberWithoutDecimalsInAString);
 
         String aNumberWithDecimalsInAString = "45.0";
-        float floatParsedFromStr=Float.parseFloat(aNumberWithDecimalsInAString);
-        double doubleParsedFromStr=Double.parseDouble(aNumberWithDecimalsInAString);
+        float floatParsedFromStr = Float.parseFloat(aNumberWithDecimalsInAString);
+        double doubleParsedFromStr = Double.parseDouble(aNumberWithDecimalsInAString);
 
-        
+
         //conversion from char to int
         char c = 'd';
         int charValue = c; //charValue is 100 now, is the unicode value of 'd'
@@ -47,8 +46,8 @@ public class c03_Conversions_Operators {
 
 
         //Extract a char from a String
-        String aString="ABCDEF";
+        String aString = "ABCDEF";
         char aCharFromAString = aString.charAt(1); //char will contain 'B'
-	}
+    }
 
 }

@@ -1,8 +1,7 @@
-
 public class c02_Variables_Types {
 
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         //Comments
 
         //2 types: single line & multiline
@@ -12,7 +11,7 @@ public class c02_Variables_Types {
 
 
         /* Multiline comment
-         * You can write more 
+         * You can write more
          * than one line
          */
 
@@ -37,21 +36,21 @@ public class c02_Variables_Types {
         long aLong = -9223372036854775808L; //Note the last "L"
 
         // Numbers with decimals
-        
+
         //float and double types can store large amounts with many decimals at the cost of some precision
         //in computation and storage
-        
+
         //float: Approx. ± 1.5 x 10^45 to ± 3.4 × 10^38 with 7 decimal digits
         float aFloat = 3.16f; //note the final "f"
-        
+
         //double: Approx. ±5.0 x 10^324 to ±1.7 x 10^308 with 15 o 16 decimal digits
         double aDouble = 400.123456879; //by default a decimal number is a float
 
 
         //BOOLEANS, they can only be true or false
 
-        boolean aBool=false;
-        boolean antherBool=true;
+        boolean aBool = false;
+        boolean antherBool = true;
 
         //Initialization
         int anIntVar; //0 by default
@@ -64,13 +63,13 @@ public class c02_Variables_Types {
 
 
         //strings and chars
-        char aChar='c';
+        char aChar = 'c';
         String anString = "an string";
 
         //ESPECIAL CHARS
 
         //How do we put a character " (double quote) into an string?
-        
+
         //Using the escape character "\"
         //any character that comes after the backslash (\) is understood
         //as a normal character, not a character with special meaning 
@@ -80,8 +79,8 @@ public class c02_Variables_Types {
         char anEscChar = '\'';
 
         //How can we put a "\" character in a string
-        String filePathUnix="/Documents/alex/file.txt";
-        String filePathWindows="C:\\Documents\\alex\\file.txt";
+        String filePathUnix = "/Documents/alex/file.txt";
+        String filePathWindows = "C:\\Documents\\alex\\file.txt";
         System.out.println(filePathWindows);
 
 
@@ -114,18 +113,18 @@ public class c02_Variables_Types {
         //A variable stores a value that can change throughout the program
         int aVariable = 1;
         aVariable = 4;
-        aVariable=aVariable*2;
+        aVariable = aVariable * 2;
 
         //A constant stores a value that is fixed throughout the program
-        final double PI=3.1416;
-        
-        double result =aVariable*PI+100;
+        final double PI = 3.1416;
 
-        final int MINUTES_IN_AN_HOUR=60;
-        final int SECONDS_IN_AN_MINUTE=60;
+        double result = aVariable * PI + 100;
 
-        int seconds=1*MINUTES_IN_AN_HOUR*SECONDS_IN_AN_MINUTE;
+        final int MINUTES_IN_AN_HOUR = 60;
+        final int SECONDS_IN_AN_MINUTE = 60;
 
-	}
+        int seconds = MINUTES_IN_AN_HOUR * SECONDS_IN_AN_MINUTE;
+
+    }
 
 }
