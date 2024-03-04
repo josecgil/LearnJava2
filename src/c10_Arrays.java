@@ -23,6 +23,7 @@ public class c10_Arrays {
         //alternative syntax, same as before
         int[] unidimensionalArray3 = {10, 20, 30};
 
+
         //Multidimensional Array
         String[][] multidimensionalArray = new String[2][3]; //2 dimensions array
         multidimensionalArray[0][0] = "A";
@@ -35,6 +36,26 @@ public class c10_Arrays {
         // Declare & init a multidimensional array
         String[][] multidimensionalArray2 = {{"A", "B", "C"}, {"D", "E", "F"}};
 
+        String[][] personasCine = {
+                {"Giulia", "MJ"  , "Alex"},
+                {"JC"    , "Emma", "Elsa"}
+        };
+
+
+
+        double[] bitcoins={0.123,0.42345,0.123123,1.9992,0.12,0.12456};
+        System.out.println("Euros que gestionamos: "+totalInEuros(bitcoins)+"€");
     }
+
+    private static double totalInEuros(double[] bitcoins) {
+        double totalBitcoins=0;
+        for (int i=0;i<bitcoins.length;i++) {
+            double currentBitcoin=bitcoins[i];
+            totalBitcoins=totalBitcoins+currentBitcoin;
+        }
+        return totalBitcoins*61684.61; //179707.81€
+
+    }
+
 
 }

@@ -1,6 +1,13 @@
 public class c08_Strings {
 
     public static void main(String[] args) {
+        System.out.println(numberOfAs("BBBBBBB")); //0
+        System.out.println(numberOfAs("BBABBBB")); //1
+        System.out.println(numberOfAs("BBABBBA")); //2
+        System.out.println(numberOfAs("AAABBBB")); //3
+        System.exit(0);
+
+
         //String
 
         //Get single chars
@@ -60,6 +67,19 @@ public class c08_Strings {
         boolean startsWith2 = numbers.startsWith("2"); //startsWith2=false
         boolean endsIn45 = numbers.endsWith("45"); //endsIn45=true
 
+    }
+
+    private static int numberOfAs(String str){
+        int countAs=0;
+        str=str.toLowerCase();
+        int position=0;
+        while (true) {
+            int indexOfA = str.indexOf('a', position);
+            if (indexOfA ==-1) break;
+            countAs++;
+            position=indexOfA+1;
+        }
+        return countAs;
     }
 
 }
