@@ -41,8 +41,6 @@ public class c10_Arrays {
                 {"JC"    , "Emma", "Elsa"}
         };
 
-
-
         double[] bitcoins={0.123,0.42345,0.123123,1.9992,0.12,0.12456};
         System.out.println("Euros que gestionamos: "+totalInEuros(bitcoins)+"€");
     }
@@ -54,8 +52,5 @@ public class c10_Arrays {
             totalBitcoins=totalBitcoins+currentBitcoin;
         }
         return totalBitcoins*61684.61; //179707.81€
-
     }
-
-
 }
