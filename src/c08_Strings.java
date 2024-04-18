@@ -1,13 +1,6 @@
 public class c08_Strings {
 
     public static void main(String[] args) {
-        System.out.println(numberOfAs("BBBBBBB")); //0
-        System.out.println(numberOfAs("BBABBBB")); //1
-        System.out.println(numberOfAs("BBABBBA")); //2
-        System.out.println(numberOfAs("AAABBBB")); //3
-        System.exit(0);
-
-
         //String
 
         //Get single chars
@@ -22,7 +15,7 @@ public class c08_Strings {
         //Gets some letters from the string
         String letters = "ABCDEF";
         String someLetters = letters.substring(1); //someLetters="BCDEF"
-        String someLetters2 = letters.substring(1, 2); //someLetters2="BC"
+        String someLetters2 = letters.substring(1,2); //someLetters2="BC"
 
         //String.trim();
         //Remove spaces before and after

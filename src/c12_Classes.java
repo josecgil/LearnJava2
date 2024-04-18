@@ -6,18 +6,21 @@ public class c12_Classes {
 		
 		//Client is a class
 		//You can create an "instance" of a class using the "new" keyword
-		Client client1=new Client();
+		Client client1=new Client("Sparrow, Jack");
 		//I can access the "properties" of an instance using the "dot" operator
-		client1.name="Jack";
-		client1.surname="Sparrow";
-	
+		//client1.name="Jack";
+		//client1.surname="Sparrow";
+        System.out.println(client1.getFullName());
+
 		//Each instance has his own space in memory and can remember
 		//different values
-		Client client2=new Client();
-		client2.name="Mickey";
-		client2.surname="Mouse";
+		Client client2=new Client("Mickey", "Mouse");
 
-		
+        System.out.println(client2.getFullName());
+
+		Client client3=new Client("McClane, John");
+        System.out.println(client3.getFullName());
+
 		//Let's imagine a Point a in a 2D Plane
 		//These points has 2 coordinates: x & y
 		//for this example we will use only integers to represent positions
