@@ -1,3 +1,5 @@
+
+
 public class Stack {
     // 3 1 5
     //push(7) ok
@@ -16,6 +18,9 @@ public class Stack {
 
     //10 20 30 40 50 60
     public static void main(String[] args) {
+
+
+
         Stack s=new Stack();
         s.Push(10);
         s.Push(20);
