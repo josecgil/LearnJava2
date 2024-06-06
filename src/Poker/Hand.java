@@ -11,10 +11,10 @@ One pair   -----> Done (11234) 1 par
 Two pair   ----> Done (22335) dos pares
 Three of a kind  ---> Done (11154) tres pares
 Straight ---> (56789) escalera diferentes colores
-Flush  ---> (KQ985) Mismo color
-Full house --->(KK888) pareja y trio
-Four of a kind ---->(AAAA3) da igual el color se llama Poker
-Straight flush ----> (678910) mismo color
+Flush  ---> (KQ985) Done Mismo color
+Full house --->Done (KK888) pareja y trio
+Four of a kind ---->Done (AAAA3) da igual el color se llama Poker
+Straight flush ----> (678910) escalera mismo color
 Five of a kind ----> (AKQJ10) Mismo Color
  */
 
@@ -22,8 +22,13 @@ public class Hand {
 
 
     private String hand;
-    public Hand(String hand) {
+    public Hand(String hand) throws InvalidHandException {
         this.hand =hand;
+
+        if (this.hand.length()!=10) {
+            throw new InvalidHandException("A hand needs to be 10 chars long.");
+        }
+        //Detectar cuando faltan palos
     }
 
     private String getHandWithoutSuits() {
@@ -46,7 +51,11 @@ public class Hand {
     }
 
     public String getCategory() {
-        if (handHasThreeOfAKind()) {
+        if (isFullHouse()) {
+            return "Full House";
+        } else if (handHasFourOfAKind()) {
+            return "Four of a Kind";
+        } else if (handHasThreeOfAKind()) {
             return "Three of a kind";
         } else if (handHasOneRepeatChar()) {
             return "One Pair";
@@ -88,6 +97,32 @@ public class Hand {
         return false;
     }
 
+    private boolean handHasFourOfAKind() {
+        String handWithoutSuits = this.getHandWithoutSuits();
+        for (char card : handWithoutSuits.toCharArray()) {
+            if (countRepeats(handWithoutSuits, card) == 4) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isFullHouse() {
+        String handWithoutSuits = getHandWithoutSuits();
+        boolean hasThreeOfAKind = false;
+        boolean hasPair = false;
+        for (char card : handWithoutSuits.toCharArray()) {
+            int count = countRepeats(handWithoutSuits, card);
+            if (count == 3) {
+                hasThreeOfAKind = true;
+            } else if (count == 2) {
+                hasPair = true;
+            }
+        }
+        return hasThreeOfAKind && hasPair;
+    }
+
+
     private boolean isFlush() {
         String handWithoutRank=getHandWithoutRank();
         for (char c:"♦♣♥♠".toCharArray()) {
@@ -115,21 +150,23 @@ public class Hand {
 
     //Palo (Suit)
     //diamonds (♦), clubs (♣), hearts (♥) and spades (♠)
-    public static void main(String[] args) {
-        Hand highCardHand=new Hand("2♦3♣4♥5♠6♥");
-        System.out.println(highCardHand.toString() +"->"+highCardHand.getCategory());
-        Hand onePairHand=new Hand("2♦2♣4♥5♠6♥");
-        System.out.println(onePairHand.toString() +"->"+onePairHand.getCategory());
+    public static void main(String[] args) throws InvalidHandException {
         Hand twoPairHand=new Hand("2♦2♣4♥4♠6♥");
         System.out.println(twoPairHand.toString() +"->"+twoPairHand.getCategory());
         Hand ThreeOfaKind=new Hand("2♦2♣2♥4♠6♥");
         System.out.println(ThreeOfaKind.toString() +"->"+ThreeOfaKind.getCategory());
         Hand ThreeOfaKind2=new Hand("A♦A♣A♥4♠6♥");
         System.out.println(ThreeOfaKind2.toString() +"->"+ThreeOfaKind2.getCategory());
+        Hand fullHouseHand = new Hand("3♦3♣3♥4♠4♥");
+        System.out.println(fullHouseHand.toString() + " -> " + fullHouseHand.getCategory());
         Hand flushDiamonds=new Hand("2♦3♦4♦6♦7♦");
         System.out.println(flushDiamonds.toString() +"->"+flushDiamonds.getCategory());
         Hand flushHearts=new Hand("2♥3♥4♥6♥7♥");
         System.out.println(flushHearts.toString() +"->"+flushHearts.getCategory());
+        Hand fourOfaKind = new Hand("2♦2♣2♥2♠6♥");
+        System.out.println(fourOfaKind.toString() + " -> " + fourOfaKind.getCategory());
+        Hand fourOfaKind2 = new Hand("A♦A♣A♥A♠6♥");
+        System.out.println(fourOfaKind2.toString() + " -> " + fourOfaKind2.getCategory());
 
     }
 
