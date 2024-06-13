@@ -18,6 +18,9 @@ Straight flush ----> (678910) escalera mismo color
 Five of a kind ----> (AKQJ10) Mismo Color
  */
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Hand {
 
 
@@ -63,8 +66,30 @@ public class Hand {
             return "Two Pair";
         } else if (isFlush()) {
             return "Flush";
+        } else if (isStraight()) {
+            return "Straight";
         }
         return "High card";
+    }
+
+    public boolean isStraight() {
+        String handWithoutSuits=getHandWithoutSuits(); //25678
+        ArrayList<Integer> handInNumbers=new ArrayList<Integer>();
+        for (char c:handWithoutSuits.toCharArray()) {
+            int number=Integer.parseInt(""+c);
+            handInNumbers.add(number);
+        }
+        //sort numbers ascendente 43256 => 23456
+        Collections.sort(handInNumbers);
+        //calcula cual es la escalera "buena"
+        int firstNumber=handInNumbers.getFirst();
+        ArrayList<Integer> goodHandInNumbers=new ArrayList<>();
+        goodHandInNumbers.add(firstNumber);
+        for (int i=1; i<=4; i++) {
+            goodHandInNumbers.add(firstNumber+i);
+        }
+        //comprobar si la mano que tenemos es una escalera buena
+        return handInNumbers.equals(goodHandInNumbers);
     }
 
     private boolean handHasOneRepeatChar() {
